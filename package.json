@@ -1,0 +1,17 @@
+{
+  "name": "luxu-perfume-website",
+  "version": "1.0.0",
+  "description": "LUXU Premium Perfume Website - Founded by Rayhan Adhyfa Firdaus",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/",
+    "start": "live-server --port=3000 --open=/",
+    "build": "mkdir -p dist && cp -r * dist/ && rm -rf dist/node_modules dist/package*.json"
+  },
+  "keywords": ["perfume", "luxury", "fragrance", "website", "rayhan", "luxu"],
+  "author": "Rayhan Adhyfa Firdaus Development Team",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

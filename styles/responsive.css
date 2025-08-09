@@ -1,0 +1,439 @@
+/*
+   LUXU Premium Fragrance - Responsive Design
+   Mobile-first approach for optimal viewing across all devices
+   Ensuring luxury experience on every screen size
+*/
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Hero section adjustments */
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    /* About section */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .about-stats {
+        justify-content: center;
+    }
+    
+    /* Contact section */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    /* Footer adjustments */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+    }
+}
+
+/* === Mobile Styles (max-width: 768px) === */
+@media screen and (max-width: 768px) {
+    /* Typography adjustments untuk mobile */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* Header Navigation - Mobile Menu */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: var(--spacing-xl);
+        transition: var(--transition-normal);
+        box-shadow: var(--shadow-medium);
+    }
+    
+    .nav-menu.show {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: var(--spacing-sm) 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: var(--spacing-md);
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    /* Animasi untuk mobile menu toggle */
+    .nav-toggle.active .nav-toggle-icon:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .nav-toggle.active .nav-toggle-icon:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active .nav-toggle-icon:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Hero Section Mobile */
+    .hero {
+        min-height: 90vh;
+        padding-top: 80px;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .hero-perfume-img {
+        max-width: 300px;
+    }
+    
+    /* Products Grid Mobile */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .product-filters {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-xs);
+    }
+    
+    .filter-btn {
+        width: 200px;
+        text-align: center;
+    }
+    
+    .product-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .products-cta {
+        padding: var(--spacing-md);
+        margin-top: var(--spacing-lg);
+    }
+    
+    /* Features Grid Mobile */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .feature-card {
+        padding: var(--spacing-md);
+    }
+    
+    /* Testimonials Mobile */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .testimonial-card {
+        padding: var(--spacing-md);
+    }
+    
+    .testimonial-header {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .testimonial-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+        padding: var(--spacing-md);
+    }
+    
+    .testimonial-stats .stat-number {
+        font-size: 2rem;
+    }
+    
+    /* About Section Mobile */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .about-awards {
+        text-align: left;
+    }
+    
+    .awards-list {
+        gap: var(--spacing-sm);
+    }
+    
+    /* Contact Section Mobile */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .contact-details {
+        gap: var(--spacing-sm);
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-sm);
+    }
+    
+    .contact-form-container {
+        padding: var(--spacing-md);
+    }
+    
+    /* Footer Mobile */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .footer-column {
+        padding: var(--spacing-md);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: var(--radius-md);
+    }
+    
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-md);
+    }
+    
+    /* Modal Mobile */
+    .modal-content {
+        width: 95%;
+        margin: var(--spacing-sm);
+        max-height: 90vh;
+    }
+    
+    .modal-body {
+        padding: var(--spacing-md);
+    }
+    
+    /* Button adjustments */
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.9rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* === Small Mobile Styles (max-width: 480px) === */
+@media screen and (max-width: 480px) {
+    /* Further reduce font sizes untuk layar sangat kecil */
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+    }
+    
+    /* Reduce spacing untuk screen kecil */
+    .section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .hero-content {
+        padding-top: 60px;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* Product cards lebih compact */
+    .product-image-container {
+        height: 200px;
+    }
+    
+    .product-info {
+        padding: var(--spacing-sm);
+    }
+    
+    /* Form inputs lebih compact */
+    .form-input {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+    
+    .form-textarea {
+        min-height: 100px;
+    }
+    
+    /* Stats lebih compact */
+    .stat-item {
+        width: 160px;
+        padding: var(--spacing-sm);
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+}
+
+/* === Landscape Mode untuk Mobile === */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding-top: 60px;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-md);
+        align-items: center;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        gap: var(--spacing-sm);
+    }
+    
+    .nav-menu.show {
+        height: calc(100vh - 60px);
+        top: 60px;
+    }
+}
+
+/* === High DPI / Retina Display Optimizations === */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi) {
+    /* Slightly reduce box-shadows untuk performa lebih baik */
+    .product-card:hover {
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    
+    .hero-perfume-img:hover {
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+}
+
+/* === Print Styles === */
+@media print {
+    /* Hide elemen yang tidak perlu saat print */
+    .header,
+    .scroll-indicator,
+    .slider-nav,
+    .modal,
+    .loading,
+    .nav-toggle,
+    .btn {
+        display: none !important;
+    }
+    
+    /* Reset colors untuk print yang lebih baik */
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+    
+    .hero-title,
+    .section-title,
+    .brand-logo {
+        color: black !important;
+    }
+    
+    /* Adjust layout untuk print */
+    .hero,
+    .section {
+        padding: 1rem 0;
+        page-break-inside: avoid;
+    }
+    
+    .product-card,
+    .testimonial-card {
+        page-break-inside: avoid;
+        border: 1px solid #ccc;
+        margin-bottom: 1rem;
+    }
+}

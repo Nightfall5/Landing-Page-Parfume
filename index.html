@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXU - Koleksi Parfum Premium</title>
+    
+    <!-- Premium Typography Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet Links -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+    <!-- Ambient Animation Container -->
+    <div class="snow-container" id="snow-container"></div>
+    
+        <nav class="nav container">
+            <div class="nav-brand">
+                <h2 class="brand-logo">LUXU</h2>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#products" class="nav-link">Koleksi</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials" class="nav-link">Testimoni</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Tentang</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Kontak</a>
+                </li>
+            </ul>
+            
+            <!-- Toggle menu mobile -->
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="nav-toggle-icon">‖</span>
+                <span class="nav-toggle-icon">‖</span>
+                <span class="nav-toggle-icon">‖</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content container">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="hero-title-line">LUXU</span>
+                    <span class="hero-title-line">Premium Fragrance</span>
+                </h1>
+                <p class="hero-description">
+                    Rasakan kemewahan sejati dalam setiap semprotan. Koleksi eksklusif LUXU menghadirkan 
+                    masterpiece olfactory yang menggugah jiwa, menciptakan aura magnetis yang tak terlupakan 
+                    dan merefleksikan keunikan karakter Anda yang istimewa.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('products')">
+                        Jelajahi Koleksi
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')">
+                        Tentang LUXU
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg?auto=compress&cs=tinysrgb&w=500&h=600&fit=crop" 
+                     alt="LUXU Premium Perfume" class="hero-perfume-img">
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse"></div>
+        </div>
+    </section>
+
+    <!-- Section Produk -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Koleksi Premium</h2>
+                <p class="section-subtitle">
+                    Setiap kreasi dalam koleksi LUXU adalah hasil karya seni parfumeri tingkat tinggi, 
+                    diracik dengan presisi untuk menghadirkan signature scent yang mencerminkan status dan prestise Anda
+                </p>
+            </div>
+            
+            <!-- Filter Categories -->
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">Semua Koleksi</button>
+                <button class="filter-btn" data-filter="masculine">Masculine</button>
+                <button class="filter-btn" data-filter="feminine">Feminine</button>
+                <button class="filter-btn" data-filter="unisex">Unisex</button>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Kartu Produk 1 -->
+                <div class="product-card" data-aos="fade-up" data-category="masculine">
+                    <div class="product-image-container">
+                        <img src="https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" 
+                             alt="LUXU Noir" class="product-image" loading="lazy">
+                        <div class="product-badge">Best Seller</div>
+                        <div class="product-overlay">
+                            <button class="product-view-btn" onclick="showProductDetail('noir')">
+                                Lihat Detail
+                            </button>
+                            <button class="product-wishlist-btn" onclick="addToWishlist('noir')">
+                                ♡
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">LUXU Noir</h3>
+                        <div class="product-category">Masculine Collection</div>
+                        <p class="product-description">
+                            Manifestasi kekuatan maskulin dengan harmoni sempurna cedar wood dan exotic spices oriental. 
+                            Signature scent untuk pria berkarakter kuat dan penuh determinasi.
+                        </p>
+                        <div class="product-pricing">
+                            <div class="product-price">Rp 850.000</div>
+                            <div class="product-size">50ml EDT</div>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-text">(4.9/5 - 127 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kartu Produk 2 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100" data-category="feminine">
+                    <div class="product-image-container">
+                        <img src="https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" 
+                             alt="LUXU Rose" class="product-image" loading="lazy">
+                        <div class="product-badge new">New Arrival</div>
+                        <div class="product-overlay">
+                            <button class="product-view-btn" onclick="showProductDetail('rose')">
+                                Lihat Detail
+                            </button>
+                            <button class="product-wishlist-btn" onclick="addToWishlist('rose')">
+                                ♡
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">LUXU Rose</h3>
+                        <div class="product-category">Feminine Collection</div>
+                        <p class="product-description">
+                            Elegi feminin yang mempesona dengan Bulgarian rose premium dan bouquet bunga musim semi. 
+                            Ekspresi keanggunan untuk wanita yang memancarkan pesona natural dan sophisticated.
+                        </p>
+                        <div class="product-pricing">
+                            <div class="product-price">Rp 750.000</div>
+                            <div class="product-size">50ml EDP</div>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-text">(4.8/5 - 89 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kartu Produk 3 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200" data-category="unisex">
+                    <div class="product-image-container">
+                        <img src="https://images.pexels.com/photos/1961795/pexels-photo-1961795.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" 
+                             alt="LUXU Gold" class="product-image" loading="lazy">
+                        <div class="product-badge limited">Limited Edition</div>
+                        <div class="product-overlay">
+                            <button class="product-view-btn" onclick="showProductDetail('gold')">
+                                Lihat Detail
+                            </button>
+                            <button class="product-wishlist-btn" onclick="addToWishlist('gold')">
+                                ♡
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">LUXU Gold</h3>
+                        <div class="product-category">Unisex Collection</div>
+                        <p class="product-description">
+                            Limited edition eksklusif dengan fusion citrus bergamot dan Madagascar vanilla. 
+                            Unisex masterpiece untuk individu visioner yang menghargai keunikan dan kemewahan sejati.
+                        </p>
+                        <div class="product-pricing">
+                            <div class="product-price">Rp 950.000</div>
+                            <div class="product-size">50ml Parfum</div>
+                        </div>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-text">(5.0/5 - 45 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="products-cta">
+                <h3>Tidak Menemukan Signature Scent Anda?</h3>
+                <p>Tim fragrance consultant LUXU siap membantu Anda menemukan parfum yang perfect untuk personality unik Anda</p>
+                <button class="btn btn-primary" onclick="scrollToSection('contact')">
+                    Konsultasi Personal
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mengapa Memilih LUXU?</h2>
+                <p class="section-subtitle">
+                    Komitmen kami terhadap excellence dan innovation menjadikan LUXU pilihan utama para connoisseur parfum di seluruh dunia
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">🥀</div>
+                    <h3 class="feature-title">Premium Ingredients</h3>
+                    <p class="feature-description">
+                        Menggunakan rare ingredients terpilih dari berbagai belahan dunia, termasuk Bulgarian rose absolute, 
+                        Himalayan cedar, dan Madagascar vanilla untuk kualitas exceptional.
+                    </p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">🧴</div>
+                    <h3 class="feature-title">Master Perfumer</h3>
+                    <p class="feature-description">
+                        Setiap kreasi LUXU adalah hasil kolaborasi dengan master perfumer internasional berpengalaman 
+                        puluhan tahun dalam industri luxury fragrance.
+                    </p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">⏳</div>
+                    <h3 class="feature-title">Long-Lasting Formula</h3>
+                    <p class="feature-description">
+                        Teknologi advanced encapsulation memastikan longevity exceptional hingga 12+ jam dengan 
+                        sillage yang memukau sepanjang hari.
+                    </p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">👑</div>
+                    <h3 class="feature-title">Luxury Packaging</h3>
+                    <p class="feature-description">
+                        Setiap botol LUXU dikemas dalam crystal bottle premium dengan artistic design dan 
+                        luxury gift box yang perfect untuk koleksi atau hadiah istimewa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section Tentang -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h2 class="section-title">Tentang LUXU</h2>
+                    <div class="about-highlight">
+                        <span class="highlight-text">"Crafting Memories Through Scent"</span>
+                    </div>
+                    <p class="about-description">
+                        LUXU terlahir dari jiwa entrepreneurial seorang mahasiswa Teknik Informatika bernama Rayhan Adhyfa Firdaus di tahun 2025. 
+                        Meski kuliah di bidang teknologi, passion bisnis Rayhan membawanya menjelajahi berbagai peluang di luar prodi. 
+                        Dari dropshipping hingga kuliner, ia terus mencari "the one" - bisnis yang benar-benar resonan dengan visinya.
+                    </p>
+                    <p class="about-description">
+                        Breakthrough moment terjadi ketika Rayhan menemukan gap di pasar parfum Indonesia - kurangnya brand lokal berkualitas premium. 
+                        Dengan background IT, ia memanfaatkan teknologi untuk riset pasar, supply chain management, dan digital marketing. 
+                        Kolaborasi dengan perfumer profesional menghasilkan formula signature yang kemudian menjadi fondasi empire LUXU.
+                    </p>
+                    
+                    <!-- Awards Section -->
+                    <div class="about-awards">
+                        <h4>Penghargaan & Sertifikasi</h4>
+                        <div class="awards-list">
+                            <div class="award-item">
+                                <span class="award-icon">🏆</span>
+                                <span class="award-text">International Fragrance Innovation Award 2025</span>
+                            </div>
+                            <div class="award-item">
+                                <span class="award-icon">🌟</span>
+                                <span class="award-text">Young Entrepreneur of the Year 2027</span>
+                            </div>
+                            <div class="award-item">
+                                <span class="award-icon">✨</span>
+                                <span class="award-text">Sustainable Innovation Excellence 2028</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3 class="stat-number">50+</h3>
+                            <p class="stat-label">Varian Aroma</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">10K+</h3>
+                            <p class="stat-label">Pelanggan Puas</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">3</h3>
+                            <p class="stat-label">Tahun Inovasi</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">25+</h3>
+                            <p class="stat-label">Negara Distribusi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image" data-aos="fade-left">
+                    <img src="https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                         alt="LUXU Workshop" class="about-img" loading="lazy">
+                    <div class="about-image-overlay">
+                        <div class="overlay-content">
+                            <h4>LUXU Atelier</h4>
+                            <p>Tempat dimana magic terjadi - workshop eksklusif kami di Grasse, France</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Apa Kata Mereka?</h2>
+                <p class="section-subtitle">
+                    Testimoni nyata dari para connoisseur parfum yang telah merasakan luxury experience LUXU
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" 
+                                 alt="Sarah Wijaya" class="avatar-img">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Sarah Wijaya</h4>
+                            <p class="testimonial-title">Fashion Designer</p>
+                            <div class="testimonial-rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "LUXU Rose benar-benar mengubah confidence saya! Aromanya sophisticated dan tahan seharian penuh. 
+                        Klien-klien saya selalu bertanya parfum apa yang saya pakai. Investasi terbaik untuk personal branding!"
+                    </blockquote>
+                    <div class="testimonial-product">
+                        <span class="product-purchased">Membeli: LUXU Rose 50ml</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" 
+                                 alt="Michael Chen" class="avatar-img">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Michael Chen</h4>
+                            <p class="testimonial-title">CEO Startup</p>
+                            <div class="testimonial-rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "Sebagai CEO, first impression sangat penting. LUXU Noir memberikan aura authority yang perfect 
+                        untuk meeting dengan investor. Longevity-nya luar biasa, dari pagi sampai malam masih tercium!"
+                    </blockquote>
+                    <div class="testimonial-product">
+                        <span class="product-purchased">Membeli: LUXU Noir 50ml</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" 
+                                 alt="Amanda Putri" class="avatar-img">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Amanda Putri</h4>
+                            <p class="testimonial-title">Influencer & Content Creator</p>
+                            <div class="testimonial-rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "LUXU Gold limited edition ini benar-benar unique! Unisex tapi tetap feminine di kulit saya. 
+                        Packaging-nya juga Instagram-worthy banget. Followers saya sampai banyak yang tanya dimana belinya!"
+                    </blockquote>
+                    <div class="testimonial-product">
+                        <span class="product-purchased">Membeli: LUXU Gold Limited Edition</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" 
+                                 alt="David Santoso" class="avatar-img">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">David Santoso</h4>
+                            <p class="testimonial-title">Investment Banker</p>
+                            <div class="testimonial-rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "Sudah coba berbagai luxury fragrance dari brand internasional, tapi LUXU Noir ini beda level! 
+                        Complexity-nya luar biasa, dari top notes sampai dry down semuanya perfectly balanced. Worth every penny!"
+                    </blockquote>
+                    <div class="testimonial-product">
+                        <span class="product-purchased">Membeli: LUXU Noir 50ml + LUXU Rose 30ml</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" 
+                                 alt="Priscilla Tan" class="avatar-img">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Priscilla Tan</h4>
+                            <p class="testimonial-title">Luxury Consultant</p>
+                            <div class="testimonial-rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "Sebagai luxury consultant, saya sangat picky dengan fragrance. LUXU Rose ini exceptional quality! 
+                        Bulgarian rose-nya authentic, bukan synthetic. Customer service-nya juga top-notch, very professional!"
+                    </blockquote>
+                    <div class="testimonial-product">
+                        <span class="product-purchased">Membeli: LUXU Rose 50ml</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" 
+                                 alt="Ryan Pratama" class="avatar-img">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Ryan Pratama</h4>
+                            <p class="testimonial-title">Creative Director</p>
+                            <div class="testimonial-rating">
+                                <span class="stars">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "LUXU Gold ini perfect untuk creative industry! Aromanya inspiring dan bikin mood boost. 
+                        Team saya juga notice positive energy-nya. Definitely my signature scent sekarang!"
+                    </blockquote>
+                    <div class="testimonial-product">
+                        <span class="product-purchased">Membeli: LUXU Gold Limited Edition</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial Stats -->
+            <div class="testimonial-stats">
+                <div class="stat-item">
+                    <h3 class="stat-number">4.9</h3>
+                    <p class="stat-label">Rating Average</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number">2,847</h3>
+                    <p class="stat-label">Happy Customers</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number">98%</h3>
+                    <p class="stat-label">Satisfaction Rate</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number">95%</h3>
+                    <p class="stat-label">Repeat Purchase</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Kontak -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h2 class="section-title">Hubungi Kami</h2>
+                    <p class="contact-description">
+                        Butuh konsultasi eksklusif untuk menemukan signature scent yang perfect untuk personality Anda? 
+                        Tim fragrance consultant LUXU siap memberikan personalized recommendation dan exclusive service 
+                        untuk menghadirkan luxury experience yang tak terlupakan.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <h4>Alamat</h4>
+                                <p>Jl. Kemang Raya No. 123<br>Jakarta Selatan, 12560</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-text">
+                                <h4>Telepon</h4>
+                                <p>+62 21 1234 5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>hello@luxuperfume.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Nama Lengkap" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Email Address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="Nomor Telepon">
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Pesan Anda" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Konsultasi Sekarang
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="brand-logo">LUXU</h3>
+                    <p class="footer-description">
+                        Didirikan tahun 2025 oleh entrepreneur muda Rayhan Adhyfa Firdaus. Dari mahasiswa Teknik Informatika menjadi mogul parfum mewah, LUXU merepresentasikan perpaduan inovasi teknologi dan seni olfactory.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Produk</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">LUXU Noir</a></li>
+                            <li><a href="#" class="footer-link">LUXU Rose</a></li>
+                            <li><a href="#" class="footer-link">LUXU Gold</a></li>
+                            <li><a href="#" class="footer-link">Limited Edition</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Perusahaan</h4>
+                        <ul class="footer-list">
+                            <li><a href="#about" class="footer-link">Tentang Kami</a></li>
+                            <li><a href="#" class="footer-link">Karir</a></li>
+                            <li><a href="#" class="footer-link">Press</a></li>
+                            <li><a href="#contact" class="footer-link">Kontak</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Ikuti Kami</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">Instagram</a>
+                            <a href="#" class="social-link">Facebook</a>
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 LUXU Premium Fragrance. Founded by Rayhan Adhyfa Firdaus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Product details will be populated via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
+</body>
+</html>
