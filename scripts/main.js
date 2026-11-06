@@ -79,12 +79,22 @@ function updateProductImages() {
         const productKey = productKeys[index];
         const img = card.querySelector('.product-image');
         if (img && productKey) {
-            img.src = getProductImage(productKey);
+            const fallbackImage = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRDRBRjM3Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI0ZGRkZGRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxVWFUgUGVyZnVtZTwvdGV4dD48L3N2Zz4=';
+
+            // Register the fallback before changing src to avoid missing a fast error.
             img.onerror = function() {
-                console.log('Image failed to load:', this.src);
-                // Fallback image jika gambar tidak bisa dimuat
-                this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRDRBRjM3Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI0ZGRkZGRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxVWFUgUGVyZnVtZTwvdGV4dD48L3N2Zz4=';
+                if (this.dataset.fallbackApplied === 'true') {
+                    this.style.opacity = '1';
+                    console.error('LUXU fallback image could not be loaded:', this.src);
+                    return;
+                }
+
+                this.dataset.fallbackApplied = 'true';
+                console.warn('Product image failed to load; using fallback:', this.src);
+                this.src = fallbackImage;
             };
+
+            img.src = getProductImage(productKey);
         }
     });
 }
