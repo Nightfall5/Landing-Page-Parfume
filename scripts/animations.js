@@ -315,32 +315,47 @@ class LuxuAnimations {
         updateCounter();
     }
     
-    // Setup lazy loading untuk images
+    // Ensure images are revealed whether they load before or after DOMContentLoaded.
+    // Native loading="lazy" attributes remain responsible for deferred network loading.
     setupImageLazyLoading() {
         const images = document.querySelectorAll('img[src]');
-        
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    
-                    // Fade in effect
-                    img.style.opacity = '0';
-                    img.style.transition = 'opacity 0.5s ease';
-                    
-                    img.onload = () => {
-                        img.style.opacity = '1';
-                    };
-                    
-                    imageObserver.unobserve(img);
-                }
-            });
-        }, {
-            rootMargin: '50px'
-        });
-        
+
         images.forEach(img => {
-            imageObserver.observe(img);
+            img.style.transition = 'opacity 0.5s ease';
+
+            const revealImage = () => {
+                img.style.opacity = '1';
+                img.classList.add('image-loaded');
+            };
+
+            const revealFailedImage = () => {
+                // Keep the image element visible so its fallback/alt text can be seen.
+                img.style.opacity = '1';
+                img.classList.add('image-load-error');
+                console.warn('Image failed to load:', img.currentSrc || img.src);
+            };
+
+            // Cached images may already be complete before this script runs.
+            if (img.complete) {
+                revealImage();
+                if (img.naturalWidth === 0) {
+                    img.classList.add('image-load-error');
+                }
+                return;
+            }
+
+            img.style.opacity = '0';
+            img.addEventListener('load', revealImage, { once: true });
+            img.addEventListener('error', revealFailedImage, { once: true });
+
+            // Re-check after listeners are attached to close the completion race.
+            if (img.complete) {
+                if (img.naturalWidth > 0) {
+                    revealImage();
+                } else {
+                    revealFailedImage();
+                }
+            }
         });
     }
     
