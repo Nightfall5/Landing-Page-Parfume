@@ -1,7 +1,7 @@
 # LUXU — Premium Perfume Landing Page
 
-> **Deployment:** the GitHub Actions build and publish workflow is configured. Enable GitHub Pages for this repository with **Settings → Pages → Source: GitHub Actions** to activate the live URL.  
-> [Open Pages settings](https://github.com/Nightfall5/Landing-Page-Parfume/settings/pages) · [Source code](https://github.com/Nightfall5/Landing-Page-Parfume)
+> **Live demo:** https://nightfall5.github.io/Landing-Page-Parfume/  
+> Source code: https://github.com/Nightfall5/Landing-Page-Parfume
 
 LUXU adalah proyek website landing page bertema parfum premium. Proyek ini berfokus pada penyajian identitas visual brand, katalog produk, dan interaksi antarmuka menggunakan teknologi frontend.
 
