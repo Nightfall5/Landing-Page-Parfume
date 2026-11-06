@@ -1,17 +1,9 @@
-# Pages source was enabled in repository Settings after initial setup.
 name: Deploy LUXU landing page to GitHub Pages
 
 on:
   push:
-    branches: [main]
-    paths:
-      - "index.html"
-      - "images/**"
-      - "scripts/**"
-      - "styles/**"
-      - "package.json"
-      - "package-lock.json"
-      - ".github/workflows/deploy-pages.yml"
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -35,17 +27,8 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v7
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: 22
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
       - name: Build static website
-        run: npm run build
+        run: node scripts/build.mjs
 
       - name: Add Pages marker
         run: touch dist/.nojekyll
