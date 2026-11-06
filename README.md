@@ -1,5 +1,8 @@
 # LUXU — Premium Perfume Landing Page
 
+> **Live demo:** https://nightfall5.github.io/Landing-Page-Parfume/  
+> Source code: https://github.com/Nightfall5/Landing-Page-Parfume
+
 LUXU adalah proyek website landing page bertema parfum premium. Proyek ini berfokus pada penyajian identitas visual brand, katalog produk, dan interaksi antarmuka menggunakan teknologi frontend.
 
 ## Fitur antarmuka
