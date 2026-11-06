@@ -6,9 +6,16 @@
   "scripts": {
     "dev": "live-server --port=3000 --open=/",
     "start": "live-server --port=3000 --open=/",
-    "build": "mkdir -p dist && cp -r * dist/ && rm -rf dist/node_modules dist/package*.json"
+    "build": "node scripts/build.mjs"
   },
-  "keywords": ["perfume", "luxury", "fragrance", "website", "rayhan", "luxu"],
+  "keywords": [
+    "perfume",
+    "luxury",
+    "fragrance",
+    "website",
+    "rayhan",
+    "luxu"
+  ],
   "author": "Rayhan Adhyfa Firdaus Development Team",
   "license": "ISC",
   "devDependencies": {
